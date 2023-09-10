@@ -69,7 +69,7 @@ public class WorthTrainingToken extends ClipboardToken {
         final int value = maxEv
                 ? bestInEvolutionChain(ivs.pokemon, combination)
                 : normalizedResult(ivs.pokemon, combination);
-        return Integer.toString(value);
+        return String.format("%02d", value);
     }
 
     private static int normalizedResult(Pokemon p, IVCombination combination) {
