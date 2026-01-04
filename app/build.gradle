@@ -51,6 +51,11 @@ android {
      */
     compileSdkVersion 33
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
     /**
      * Build configurations for APK
      * Ensure the following values are updated before generating release builds:
@@ -71,6 +76,7 @@ android {
      */
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
 
     /**
@@ -164,8 +170,8 @@ dependencies {
      */
     //somehow it won't build without this
     //noinspection AnnotationProcessorOnCompilePath
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.18.42'
+    annotationProcessor 'org.projectlombok:lombok:1.18.42'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.6.0-rc01'
     //explicitly declare lifecycle-viewmodel-ktx to avoid duplicate class errors
